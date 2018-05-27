@@ -1,0 +1,64 @@
+language: node_js
+
+# Run tests on
+node_js:
+  - "8"
+  - "9"
+  - "10"
+
+services:
+  # Enable docker
+  - docker
+
+addons:
+  apt:
+    packages:
+      # Get an updated version of docker
+      - docker-ce
+
+# Cache dependencies
+cache:
+  directories:
+    - node_modules
+    - "$HOME/google-cloud-sdk/"
+
+stages:
+  - test
+  - upload coverage
+  - build and push container
+  # - lint chart
+  # - deploy application
+
+jobs:
+  include:
+    - stage: upload coverage
+      node_js: "8"
+      script:
+      - npm install --save codacy-coverage
+      - npm run coverage
+      - cat coverage/lcov.info | ./node_modules/.bin/codacy-coverage
+
+    - stage: build and push container
+      node_js: "8"
+      install: skip
+      script:
+      - chmod +x $TRAVIS_BUILD_DIR/scripts/build_container.sh
+      - bash $TRAVIS_BUILD_DIR/scripts/build_container.sh
+
+    - stage: lint chart
+      node_js: "8"
+      install: skip
+      script:
+      - curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+      - helm lint --set deployment.imageVersion=latest ./chart/rackian-api/
+
+    - stage: deploy application
+      node_js: "8"
+      script: skip
+      install: skip
+      deploy:
+        skip_cleanup: true
+        provider: script
+        script:
+        - chmod +x $TRAVIS_BUILD_DIR/scripts/deploy_cluster.sh &&
+          bash $TRAVIS_BUILD_DIR/scripts/deploy_cluster.sh
