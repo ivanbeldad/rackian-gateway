@@ -1,0 +1,15 @@
+environment: staging
+
+deployment:
+  name: gateway-staging
+  replicas: 1
+  imageVersion: latest
+
+service:
+  name: gateway-staging
+
+configMap:
+  name: gateway-env-staging
+
+secret:
+  name: gateway-env-staging

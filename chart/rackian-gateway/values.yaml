@@ -1,0 +1,26 @@
+app: api
+
+environment: production
+
+deployment:
+  name: gateway
+  replicas: 3
+  containerPort: 10000
+  image: ivandelabeldad/rackian-gateway
+  # force to set imageVersion at runtime
+  # imageVersion: latest
+
+service:
+  name: gateway
+  port: 80
+
+configMap:
+  name: gateway-env
+  data:
+    NODE_ENV: production
+    PORT: 10000
+    DB_NAME: rackianCloudStaging
+    STORAGE_BUCKET_NAME: rackian-cloud
+
+secret:
+  name: gateway-env
