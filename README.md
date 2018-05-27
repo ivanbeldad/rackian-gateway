@@ -1,7 +1,6 @@
 # rackian-gateway
 
-[![Travis](https://img.shields.io/travis/ivandelabeldad/rackian-gateway.svg?style=flat-square)](https://travis-ci.org/ivandelabeldad/rackian-gateway)
-[![CircleCI](https://img.shields.io/circleci/project/github/ivandelabeldad/rackian-gateway.svg?style=flat-square)](https://circleci.com/gh/ivandelabeldad/rackian-gateway)
+[![Travis](https://img.shields.io/travis/ivandelabeldad/rackian-gateway.svg?style=flat-square)](https://travis-ci.com/ivandelabeldad/rackian-gateway)
 [![Docker Build Status](https://img.shields.io/docker/build/ivandelabeldad/travis-cli.svg?style=flat-square)](https://hub.docker.com/r/ivandelabeldad/rackian-gateway/)
 [![Docker Automated build](https://img.shields.io/docker/automated/ivandelabeldad/rackian-gateway.svg?style=flat-square)](https://hub.docker.com/r/ivandelabeldad/rackian-gateway/)
 [![Known Vulnerabilities](https://snyk.io/test/github/ivandelabeldad/rackian-gateway/badge.svg?targetFile=package.json&style=flat-square)](https://snyk.io/test/github/ivandelabeldad/rackian-gateway?targetFile=package.json)
