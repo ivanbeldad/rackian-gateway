@@ -26,8 +26,8 @@ stages:
   - test
   - upload coverage
   - build and push container
-  # - lint chart
-  # - deploy application
+  - lint chart
+  - deploy application
 
 jobs:
   include:
