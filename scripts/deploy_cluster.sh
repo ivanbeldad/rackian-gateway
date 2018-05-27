@@ -50,7 +50,7 @@ CREDENTIALS_DIR=${HOME}/credentials
 mkdir $CREDENTIALS_DIR
 
 # Decrypt credentials of gcloud
-openssl aes-256-cbc -K $encrypted_a89191c56639_key -iv $encrypted_a89191c56639_iv \
+openssl aes-256-cbc -K $encrypted_0c35eebf403c_key -iv $encrypted_0c35eebf403c_iv \
 -in $BUILD_DIR/rackian-cloud-1-travis-secret.json.enc \
 -out $CREDENTIALS_DIR/rackian-cloud-1-travis-secret.json -d
 
