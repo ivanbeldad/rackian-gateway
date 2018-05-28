@@ -7,7 +7,7 @@
 Single entry point to Rackian microservices
 
 [![Build Status](https://travis-ci.com/ivandelabeldad/rackian-gateway.svg?branch=master)](https://travis-ci.com/ivandelabeldad/rackian-gateway)
-[![Docker Build Status](https://img.shields.io/docker/build/ivandelabeldad/travis-cli.svg?style=flat)](https://hub.docker.com/r/ivandelabeldad/rackian-gateway/)
+[![Docker Build Status](https://img.shields.io/docker/build/ivandelabeldad/rackian-gateway.svg?style=flat)](https://hub.docker.com/r/ivandelabeldad/rackian-gateway/)
 [![Docker Automated build](https://img.shields.io/docker/automated/ivandelabeldad/rackian-gateway.svg?style=flat)](https://hub.docker.com/r/ivandelabeldad/rackian-gateway/)
 [![Known Vulnerabilities](https://snyk.io/test/github/ivandelabeldad/rackian-gateway/badge.svg?targetFile=package.json&style=flat)](https://snyk.io/test/github/ivandelabeldad/rackian-gateway?targetFile=package.json)
 [![Version](https://img.shields.io/badge/version-0.0.1-orange.svg?style=flat)](https://github.com/ivandelabeldad/rackian-gateway)
